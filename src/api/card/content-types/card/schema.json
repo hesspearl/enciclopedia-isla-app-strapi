@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cards",
+  "info": {
+    "singularName": "card",
+    "pluralName": "cards",
+    "displayName": "Cards"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "regex": "\\b[A-Z][a-z]*\\b"
+    },
+    "card_id": {
+      "type": "uid",
+      "targetField": "title",
+      "regex": "^[a-z-]+$"
+    },
+    "short_description": {
+      "type": "text",
+      "maxLength": 50
+    },
+    "main_description": {
+      "type": "text"
+    },
+    "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "content_blocks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::content-block.content-block",
+      "mappedBy": "card"
+    },
+    "subject": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::subject.subject",
+      "inversedBy": "cards"
+    }
+  }
+}

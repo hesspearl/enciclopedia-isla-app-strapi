@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subjects",
+  "info": {
+    "singularName": "subject",
+    "pluralName": "subjects",
+    "displayName": "Assunto"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "regex": "\\b[A-Z][a-z]*\\b"
+    },
+    "subject_id": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true,
+      "regex": "^[a-z-]+$"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::card.card",
+      "mappedBy": "subject"
+    }
+  }
+}
