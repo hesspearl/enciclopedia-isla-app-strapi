@@ -29,7 +29,7 @@
       "target": "api::card.card",
       "inversedBy": "content_blocks"
     },
-    "description": {
+    "content_rich_text": {
       "type": "blocks",
       "required": true
     }

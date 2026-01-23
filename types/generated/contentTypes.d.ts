@@ -517,10 +517,10 @@ export interface ApiContentBlockContentBlock
   };
   attributes: {
     card: Schema.Attribute.Relation<'manyToOne', 'api::card.card'>;
+    content_rich_text: Schema.Attribute.Blocks & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Blocks & Schema.Attribute.Required;
     image_url: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
