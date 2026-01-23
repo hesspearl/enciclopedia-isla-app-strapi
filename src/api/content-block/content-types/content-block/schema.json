@@ -15,10 +15,6 @@
       "type": "string",
       "required": true
     },
-    "description": {
-      "type": "text",
-      "required": true
-    },
     "image_url": {
       "type": "media",
       "multiple": false,
@@ -32,6 +28,10 @@
       "relation": "manyToOne",
       "target": "api::card.card",
       "inversedBy": "content_blocks"
+    },
+    "description": {
+      "type": "blocks",
+      "required": true
     }
   }
 }
