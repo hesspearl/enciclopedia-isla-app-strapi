@@ -14,5 +14,13 @@ module.exports = {
     config: {
       jwtSecret: process.env.JWT_SECRET,
     },
+    "rest-cache": {
+      enabled: true,
+      config: {
+        provider: "memory", // or 'redis' if you want external cache
+        maxAge: 60000, // cache for 60 seconds
+        hitpass: false, // whether to bypass cache on certain conditions
+      },
+    },
   },
 };
