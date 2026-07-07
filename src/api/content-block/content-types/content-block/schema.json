@@ -32,6 +32,15 @@
     "content_rich_text": {
       "type": "blocks",
       "required": true
+    },
+    "sequence_marker": {
+      "type": "enumeration",
+      "required": true,
+      "default": "none",
+      "enum": [
+        "none",
+        "number"
+      ]
     }
   }
 }

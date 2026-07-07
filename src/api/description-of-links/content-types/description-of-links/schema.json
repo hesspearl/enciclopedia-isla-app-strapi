@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "descriptions_of_links",
+  "info": {
+    "singularName": "description-of-links",
+    "pluralName": "descriptions-of-links",
+    "displayName": "Descrição dos Links"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "external_link_text": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::external-link-card.external-link-card",
+      "mappedBy": "useful_links_description"
+    }
+  }
+}

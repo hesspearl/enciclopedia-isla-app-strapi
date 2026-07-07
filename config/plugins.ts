@@ -10,6 +10,7 @@ module.exports = {
         process.env.STRAPI_GRAPHQL_V4_COMPATIBILITY_MODE ?? false,
     },
   },
+
   "users-permissions": {
     config: {
       jwtSecret: process.env.JWT_SECRET,

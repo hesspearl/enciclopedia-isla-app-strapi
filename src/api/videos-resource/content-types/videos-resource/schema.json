@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "videos_resources",
+  "info": {
+    "singularName": "videos-resource",
+    "pluralName": "videos-resources",
+    "displayName": "Recursos de Video"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "youtube_video_id": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

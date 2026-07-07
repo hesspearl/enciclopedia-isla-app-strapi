@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "external_link_cards",
+  "info": {
+    "singularName": "external-link-card",
+    "pluralName": "external-link-cards",
+    "displayName": "Links Externos Uteis"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "external_link_address": {
+      "type": "string"
+    },
+    "useful_links_description": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::description-of-links.description-of-links",
+      "inversedBy": "external_link_text"
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
