@@ -28,6 +28,9 @@
     "youtube_video_id": {
       "type": "string",
       "required": true
+    },
+    "display_order": {
+      "type": "integer"
     }
   }
 }
